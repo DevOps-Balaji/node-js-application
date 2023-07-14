@@ -4,17 +4,6 @@ const express = require("express");
 const app = express();
 const ejs = require("ejs");
 
-const { DynamoDB } = require("@aws-sdk/client-dynamodb");
-
-const dynamodb = new DynamoDB({
-  region: "ap-south-1",
-  credentials: {
-    accessKeyId: "AKIATGUS7Y2AVTWXIBOD",
-    secretAccessKey: "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",
-  },
-});
-
-
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(
